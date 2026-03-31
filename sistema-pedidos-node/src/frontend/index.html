@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pedidos</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        input, button { padding: 10px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+        #mensagens { margin-top: 15px; padding: 10px; background: #eee; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Lojinha (Node MVC)</h1>
+
+    <div class="box">
+        <h2>Fazer Pedido (João: ID 1 / Notebook: ID 1)</h2>
+        <input type="number" id="qt" placeholder="Quantidade desejada (Estoque: 5)" value="1">
+        <button id="btn-comprar">Finalizar Compra</button>
+        <button id="btn-falhar" style="background:#fcc;">Forçar Falha (Qtd 10)</button>
+        
+        <div id="mensagens">Respostas aparecerão aqui...</div>
+    </div>
+
+    <div class="box">
+        <h2>Pedidos Realizados</h2>
+        <button id="btn-listar">Atualizar Lista</button>
+        <ul id="lista-pedidos"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
